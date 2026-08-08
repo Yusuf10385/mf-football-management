@@ -196,13 +196,13 @@ function ContactPage() {
 function AgentsPage() {
   const agents = [
     {
-      name: "Agent 1",
-      position: "FIFA Licensed Agent",
+      name: "Muhammad",
+      position: "Manager",
       image: "/images/Agent1.jpeg",
     },
     {
-      name: "Agent 2",
-      position: "FIFA Licensed Agent",
+      name: "Farouk Musah",
+      position: "Chief Scout",
       image: "/images/Agent2.jpeg",
     },
     
@@ -222,24 +222,24 @@ function AgentsPage() {
       <div className="grid md:grid-cols-3 gap-8">
         {agents.map((agent) => (
           <div
-            // key={agent.name}
-            // className="bg-zinc-900 rounded-3xl overflow-hidden hover:scale-105 transition"
+            key={agent.name}
+            className="bg-zinc-900 rounded-3xl overflow-hidden hover:scale-105 transition"
           >
             <img 
             src={agent.image}
-            // alt={agent.name}
+            alt={agent.name}
             className="h-96 w-full object-cover"></img>
               
           <div/>
 
             <div className="p-6">
-              {/* <h3 className="text-xl font-bold">
+              <h3 className="text-xl font-bold">
                 {agent.name}
-              </h3> */}
+              </h3>
 
-              {/* <p className="text-zinc-400 mt-2">
+              <p className="text-zinc-400 mt-2">
                 {agent.position}
-              </p> */}
+              </p>
             </div>
           </div>
         ))}
