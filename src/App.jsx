@@ -397,7 +397,7 @@ export default function App() {
               M.F Football Management
             </h1>
           </div>
-          <div className="space-x-4">
+          <div className="flex flex-wrap justify-center gap-4">
             <button
               onClick={() => setPage("home")}
               className="hover:text-green-400"
