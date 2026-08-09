@@ -196,17 +196,24 @@ function ContactPage() {
 function AgentsPage() {
   const agents = [
     {
-      name: "Muhammad",
+      name: "Dangima Moha",
       position: "Manager",
       image: "/images/Agent1.jpeg",
+      email: "faroukmusah@gmail.com",
+      phone: "+447538296533",
+      bio: "Experienced football manager specialising in player development and recruitment.",
     },
     {
       name: "Farouk Musah",
       position: "Chief Scout",
       image: "/images/Agent2.jpeg",
+      email: "faroukmusah@gmail.com",
+      phone: "+233256526423, +233537890295",
+      bio: "Extensive scouting experience, identifying and developing talented footballers across multiple regions.",
     },
     
   ];
+  const [selectedAgent, setSelectedAgent] = useState(null);
 
   return (
     <div className="max-w-7xl mx-auto px-8 py-20">
@@ -219,11 +226,12 @@ function AgentsPage() {
         throughout their careers.
       </p>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
         {agents.map((agent) => (
           <div
             key={agent.name}
-            className="bg-zinc-900 rounded-3xl overflow-hidden hover:scale-105 transition"
+            onClick={() => setSelectedAgent(agent)}
+            className="bg-zinc-900 rounded-3xl overflow-hidden hover:scale-105 transition cursor-pointer"
           >
             <img 
             src={agent.image}
@@ -244,6 +252,26 @@ function AgentsPage() {
           </div>
         ))}
       </div>
+      {selectedAgent &&(
+        <div className="mt-12 bg-zinc-900 rounded-3xl p-8">
+          <h2 className="text-4xl font-bold mb-4">
+            {selectedAgent.name}
+          </h2>
+          <p className="text-green-400 mb-4">
+            {selectedAgent.position}
+          </p>
+          <p className="mb-4">
+            {selectedAgent.bio}
+          </p>
+          <p className="mb-2">
+            <strong>Email:</strong> {selectedAgent.email}
+          </p>
+          <p>
+            <strong>Phone:</strong> {selectedAgent.phone}
+          </p>
+        </div>
+
+      )}
     </div>
   );
 }
@@ -388,7 +416,7 @@ export default function App() {
               onClick={() => setPage("agents")}
               className="hover:text-green-400"
             >
-              Agents
+              Management
             </button>
 
             <button
