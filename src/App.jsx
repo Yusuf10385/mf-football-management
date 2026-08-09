@@ -199,7 +199,7 @@ function AgentsPage() {
       name: "Dangima Moha",
       position: "Manager",
       image: "/images/Agent1.jpeg",
-      email: "faroukmusah@gmail.com",
+      email: "N/A",
       phone: "+447538296533",
       bio: "Experienced football manager specialising in player development and recruitment.",
     },
