@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
+
 
 function HomePage() {
   const players = [
@@ -79,7 +81,7 @@ function HomePage() {
               > 
                 <img 
                   src={player.image}
-                  alt
+                  alt={player.name}
                   className="h-64 w-full object-cover"
                 />
                 
@@ -452,7 +454,25 @@ export default function App() {
   >
     Contact Us
   </button>
-  
+  <div className="flex justify-center gap-6 mt-8">
+    <a 
+      href="https://facebook.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-black font-semibold hover:text-white transition"
+      >
+        <FaFacebook size={36} />
+    </a>
+    <a 
+      href="https://www.linkedin.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-black font-semibold hover:text-white transition"
+      >
+        <FaLinkedin size={36} />
+    </a>
+    
+  </div>
 </footer>
 <div className="bg-black text-center py-6 border-t border-zinc-800">  <p className="text-zinc-400">    © 2026 M.F Football Management. All Rights Reserved.  </p></div>
     </div>
